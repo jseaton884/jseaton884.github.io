@@ -45,7 +45,7 @@ bt('initialize', SITEID, {externalIds: {zync: 'hello'}});
 	scriptTag.src = 'https://d-code.liadm.com/did-0049.min.js';
 	scriptTag['onload'] = function(e) {
 		window.liQd_did_0049.resolve(function(result) { 
-			if (result) console.log(result); bt('updateUser',{externalIds: {nonId: result.nonId)}}; }, function(err) {console.error(err); },
+			if (result) console.log(result); bt('updateUser',{externalIds: {nonId: result.nonId}}); }, function(err) {console.error(err); },
     		{resolve: "nonId"});
 	}
 document.head.appendChild(scriptTag);
