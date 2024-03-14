@@ -20,7 +20,17 @@
         });
     }
 </script>
-
+<script type="text/javascript">
+	var scriptTag = document.createElement('script');
+	scriptTag.src = 'https://d-code.liadm.com/did-0049.min.js';
+	scriptTag['onload'] = function(e) {
+		window.liQd_did_0049.resolve(function(result) { if
+			(result) console.log(result); }, function(err) {
+			console.error(err); },
+    	{resolve: "nonId","md5"});
+}
+document.head.appendChild(scriptTag);
+</script>
 </head>
 
 <body onload="checkCookie()">
