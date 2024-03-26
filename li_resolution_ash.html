@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script async type="text/javascript">
+var SITEID='jordan-sandbox';
+(function(b, t, r, a, i, n) {
+    b['bt']=b['bt'] || function() {
+        (b['_bt']=b['_bt']||[]).push(arguments);
+    },
+    i = t.createElement(r),
+    n = t.getElementsByTagName(r)[0];
+    i.async = 1;
+    i.src = a;
+    n.parentNode.insertBefore(i, n);
+})(
+    window,
+    document,
+    'script',
+ 	'https://cdn.boomtrain.com/p13n/'+SITEID+'/p13n.min.js'
+);
+
+	var scriptTag = document.createElement('script');
+	scriptTag.src = 'https://d-code.liadm.com/did-0049.min.js';
+	scriptTag['onload'] = function(e) {
+		window.liQd_did_0049.resolve(function(result) { 
+			if (result) 
+              	console.log(result); 
+          		bt('initialize', SITEID, {externalIds: {zync: 'abc123'}, {email_md5: result.md5}});
+        }, 
+        function(err) {
+          console.error(err); 
+          bt('initialize', SITEID, {externalIds: {zync: 'abc123'}});
+        },
+    		{resolve: "md5"});
+	}
+document.head.appendChild(scriptTag);
+
+</script>
+
+
+    
+</head>
+
+<body>
+
+Hello world
+
+
+
+</body>
+</html>
